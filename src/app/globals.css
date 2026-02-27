@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --auto-bg: #09090b;
+  --auto-surface: #18181b;
+  --auto-card: #27272a;
+  --auto-border: #3f3f46;
+  --auto-red: #c084fc;
+  --auto-chrome: #e4e4e7;
+  --auto-steel: #a1a1aa;
+  --auto-blue: #67e8f9;
+  --auto-gold: #fde68a;
+  --auto-green: #86efac;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--auto-bg);
+  color: #d4d4d8;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--auto-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--auto-border);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--auto-red);
+}
+
+::selection {
+  background: rgba(192, 132, 252, 0.3);
+  color: #fff;
+}
+
+@layer utilities {
+  .glow-red {
+    box-shadow: 0 0 20px rgba(192, 132, 252, 0.25),
+      0 0 40px rgba(192, 132, 252, 0.1);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(103, 232, 249, 0.25),
+      0 0 40px rgba(103, 232, 249, 0.1);
+  }
+
+  .text-gradient-auto {
+    background: linear-gradient(135deg, #c084fc, #fde68a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-chrome {
+    background: linear-gradient(135deg, #e4e4e7, #a1a1aa, #e4e4e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-steel {
+    background: linear-gradient(135deg, #71717a, #d4d4d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-carbon {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.015) 2px,
+        rgba(255, 255, 255, 0.015) 4px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.015) 2px,
+        rgba(255, 255, 255, 0.015) 4px
+      );
+  }
+
+  .bg-grid-auto {
+    background-image: linear-gradient(
+        rgba(192, 132, 252, 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(192, 132, 252, 0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .racing-stripe {
+    position: relative;
+  }
+
+  .racing-stripe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #c084fc, #fde68a);
+    border-radius: 2px;
+  }
+
+  .card-hover-auto {
+    transition: all 0.3s ease;
+    border: 1px solid #3f3f46;
+  }
+
+  .card-hover-auto:hover {
+    transform: translateY(-2px);
+    border-color: rgba(192, 132, 252, 0.3);
+    box-shadow: 0 8px 30px rgba(192, 132, 252, 0.08);
+  }
+
+  .underline-rev {
+    position: relative;
+  }
+
+  .underline-rev::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #c084fc;
+    transition: width 0.3s ease;
+  }
+
+  .underline-rev:hover::after {
+    width: 100%;
+  }
+
+  .separator-line {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #3f3f46 20%,
+      #3f3f46 80%,
+      transparent
+    );
+  }
+}
+
+@keyframes tachometer {
+  0% {
+    transform: rotate(-120deg);
+  }
+  100% {
+    transform: rotate(var(--needle-angle, 0deg));
+  }
+}
