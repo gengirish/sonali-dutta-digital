@@ -14,10 +14,10 @@ export const personalInfo = {
 };
 
 export const stats = [
-  { value: "9+", label: "Years Experience" },
-  { value: "200+", label: "Engagements Led" },
-  { value: "6+", label: "Industry Domains" },
-  { value: "10K+", label: "Community Reach" },
+  { value: "9+", label: "Years in People & Culture" },
+  { value: "200+", label: "Workshops & Sessions" },
+  { value: "6+", label: "Sectors Served" },
+  { value: "10K+", label: "Professionals Reached" },
 ];
 
 export const skillCategories = [

@@ -21,7 +21,7 @@ export default function Testimonials() {
         >
           <div className="w-10 h-px bg-auto-red" />
           <h2 className="text-sm font-mono uppercase tracking-[0.2em] text-auto-red">
-            Testimonials
+            Client Voices
           </h2>
         </motion.div>
 

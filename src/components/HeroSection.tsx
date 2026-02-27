@@ -25,7 +25,7 @@ export default function HeroSection() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded border border-auto-asphalt bg-auto-carbon text-xs text-zinc-500 font-mono tracking-wider uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-auto-green animate-pulse" />
-                Available for opportunities
+                Available for consulting engagements
               </div>
             </motion.div>
 
@@ -71,13 +71,13 @@ export default function HeroSection() {
                 href="#experience"
                 className="px-6 py-3 bg-auto-red text-white rounded-lg text-sm font-semibold hover:bg-red-600 transition-all shadow-lg shadow-auto-red/20"
               >
-                View Experience
+                Explore Engagements
               </a>
               <a
                 href="#contact"
                 className="px-6 py-3 border border-zinc-700 text-zinc-300 rounded-lg text-sm font-semibold hover:border-zinc-500 hover:text-white transition-all"
               >
-                Get In Touch
+                Book Discovery Call
               </a>
             </motion.div>
           </div>

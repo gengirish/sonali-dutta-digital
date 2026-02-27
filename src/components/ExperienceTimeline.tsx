@@ -22,7 +22,7 @@ export default function ExperienceTimeline() {
         >
           <div className="w-10 h-px bg-auto-red" />
           <h2 className="text-sm font-mono uppercase tracking-[0.2em] text-auto-red">
-            Career Journey
+            HR & Coaching Journey
           </h2>
         </motion.div>
 
@@ -103,7 +103,7 @@ export default function ExperienceTimeline() {
                         </div>
                       </div>
                       <span className="text-xs font-mono text-zinc-500">
-                        {exp.accuracy}% proficiency
+                        {exp.accuracy}% impact maturity
                       </span>
                     </div>
 
@@ -133,7 +133,7 @@ export default function ExperienceTimeline() {
 
                         <div>
                           <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-600 mb-4">
-                            Tech Stack
+                            Methods & Tools
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {exp.tech.map((t) => (

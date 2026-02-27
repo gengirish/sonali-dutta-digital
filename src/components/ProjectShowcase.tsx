@@ -21,7 +21,7 @@ export default function ProjectShowcase() {
         >
           <div className="w-10 h-px bg-auto-red" />
           <h2 className="text-sm font-mono uppercase tracking-[0.2em] text-auto-red">
-            Featured Projects
+            Signature Programs
           </h2>
         </motion.div>
 

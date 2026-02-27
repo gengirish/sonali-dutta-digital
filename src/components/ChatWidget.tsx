@@ -14,7 +14,7 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: `Hi! I'm ${personalInfo.name}'s AI assistant. Ask me anything about their career, skills, or experience.`,
+      content: `Hi! I'm ${personalInfo.name}'s AI assistant. Ask me about coaching programs, DEI workshops, leadership facilitation, or people culture outcomes.`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -102,10 +102,10 @@ export default function ChatWidget() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-white">
-                  Talk to My Resume
+                  Ask About My Coaching Practice
                 </h3>
                 <p className="text-xs text-zinc-600">
-                  Ask about {personalInfo.name.split(" ")[0]}&apos;s career
+                  Ask about {personalInfo.name.split(" ")[0]}&apos;s HR and coaching work
                 </p>
               </div>
               <div className="ml-auto flex items-center gap-1.5">
@@ -151,7 +151,7 @@ export default function ChatWidget() {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask about skills, experience..."
+                  placeholder="Ask about workshops, DEI, coaching..."
                   className="flex-1 px-4 py-2.5 rounded-lg bg-auto-carbon border border-auto-asphalt text-sm text-zinc-300 placeholder:text-zinc-700 focus:outline-none focus:border-auto-red/40 transition-colors"
                 />
                 <button
